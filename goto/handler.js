@@ -4,9 +4,9 @@ module.exports = (event, context) => {
   let redirect;
 
   if (event.path == "/home") {
-    redirect = "https://coap.cloud/";
-  } else if (event.path == "/sponsors" || event.path == "/insiders") {
-    redirect = "https://github.com/users/alexellis/sponsorship";
+    redirect = "https://coap.cloud";
+  } else if (event.path == "/github") {
+    redirect = "https://github.com/coapcloud";
   }
 
   if (!redirect) {
