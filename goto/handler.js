@@ -13,9 +13,6 @@ module.exports = (event, context) => {
     return context.status(400).fail("Unknown short URL");
   }
 
-  /* 302 Moved Temporarily
-   * Prevents the browser from caching the redirection
-   * https://en.wikipedia.org/wiki/HTTP_302 */
   context
     .status(302)
     .headers({ location: redirect })
