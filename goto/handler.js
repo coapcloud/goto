@@ -9,9 +9,6 @@ module.exports = (event, context) => {
     redirect = "https://github.com/users/alexellis/sponsorship";
   }
 
-  /* Let the user know we couldn't find the URL, we could
-   * also return a HTML page and set the correct encoding for the
-   * browser to understand. */
   if (!redirect) {
     return context.status(400).fail("Unknown short URL");
   }
